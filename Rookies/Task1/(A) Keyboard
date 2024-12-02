@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    char d;
+    string t, k = "qwertyuiopasdfghjkl;zxcvbnm,./", o = "";
+    
+    cin >> d;
+    cin >> t;
+    
+    for (char c : t) {
+        int i = k.find(c);
+        if (d == 'R') {
+            o += k[i - 1];
+        } else if (d == 'L') {
+            o += k[i + 1];
+        }
+    }
+    
+    cout << o << endl;
+
+    return 0;
+}
