@@ -1,0 +1,39 @@
+
+
+int main()
+{
+
+    int n,s ;
+    cin >> n;
+    int t = n;
+    int i = 0;
+    int arr[n] ;
+    int max = -1;
+    int min = 10000;
+    int index_max=0;
+    int index_min=0;
+
+    while(n--){
+
+        cin >> arr[i];
+        if(arr[i]>max){
+            max=arr[i];
+            index_max=i;
+        }
+        if(arr[i]<=min){
+            min=arr[i];
+            index_min=i;
+        }
+
+        i++;
+    }
+    if(index_max>index_min){
+        s=(((t-1)-index_min)+index_max)-1;
+
+    }
+    else
+        s=((t-1)-index_min)+index_max;
+    cout<<s;
+
+    return 0;
+}
